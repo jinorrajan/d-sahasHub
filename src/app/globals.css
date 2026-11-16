@@ -155,3 +155,14 @@ body {
   background-size: 250% auto !important;
   animation: text-gradient-flow 4s ease infinite !important;
 }
+
+/* Faster Smooth Marquee for Partner Logos on Mobile */
+.animate-partner-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+  will-change: transform;
+}
+.animate-partner-marquee:hover {
+  animation-play-state: paused;
+}

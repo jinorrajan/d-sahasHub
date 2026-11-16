@@ -141,10 +141,73 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* CONNECTED LOWER BAR (MINDCO PARTNER RIBBON - EVENLY BALANCED WITH OFFICIAL LOGOS) */}
-        <div className="relative bg-[#0E1E2E] border-t border-white/5 px-4 sm:px-12 lg:px-20 py-7 sm:py-10 shadow-2xl">
-          {/* Mobile: 1 column clean list or 2-column flex on larger phones without text collisions */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center">
+        {/* CONNECTED LOWER BAR (PARTNER RIBBON - CONTINUOUS SINGLE ROW MARQUEE ON MOBILE, 5-COL GRID ON TABLET/DESKTOP) */}
+        <div className="relative bg-[#0E1E2E] border-t border-white/5 px-0 sm:px-12 lg:px-20 py-5 sm:py-10 shadow-2xl overflow-hidden">
+          {/* Subtle side fade masks for mobile marquee */}
+          <div className="sm:hidden absolute left-0 top-0 bottom-0 w-10 bg-gradient-to-r from-[#0E1E2E] to-transparent z-10 pointer-events-none" />
+          <div className="sm:hidden absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-[#0E1E2E] to-transparent z-10 pointer-events-none" />
+
+          {/* MOBILE VIEW: Single row continuous running marquee */}
+          <div className="sm:hidden flex overflow-hidden select-none">
+            <div className="animate-partner-marquee flex items-center">
+              {[...Array(2)].map((_, loopIdx) => (
+                <div key={loopIdx} className="flex items-center gap-6 pr-6">
+                  {[
+                    { 
+                      name: "BYST Guilds London", 
+                      tag: "Certified Mentor",
+                      logo: "/images/client/logo/byst-guilds.png",
+                    },
+                    { 
+                      name: "Rotary International", 
+                      tag: "District Leader",
+                      logo: "/images/client/logo/rotary-intl.png",
+                    },
+                    { 
+                      name: "Elite World Records", 
+                      tag: "Record Holder",
+                      logo: "/images/client/logo/elite-records.png",
+                    },
+                    { 
+                      name: "Asian Records Academy", 
+                      tag: "Global Adjudicator",
+                      logo: "/images/client/logo/asian-records.png",
+                    },
+                    { 
+                      name: "Anna University Alumni", 
+                      tag: "Honorary Member",
+                      logo: "/images/client/logo/anna-univ.png",
+                    },
+                  ].map((partner, index) => (
+                    <div
+                      key={`${loopIdx}-${index}`}
+                      className="flex items-center gap-3 py-2 px-3.5 rounded-xl bg-white/[0.03] border border-white/5 shrink-0"
+                    >
+                      <div className="relative w-10 h-10 flex items-center justify-center shrink-0">
+                        <Image
+                          src={partner.logo}
+                          alt={`${partner.name} logo`}
+                          fill
+                          className="object-contain filter drop-shadow-md brightness-105"
+                        />
+                      </div>
+                      <div className="flex flex-col text-left whitespace-nowrap">
+                        <span className="text-xs font-bold text-gray-100 tracking-tight leading-snug">
+                          {partner.name}
+                        </span>
+                        <span className="text-[11px] font-semibold text-brand-orange">
+                          {partner.tag}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* TABLET / DESKTOP VIEW: Balanced 5-column grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center">
             {[
               { 
                 name: "BYST Guilds London", 
