@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --color-crimson: #AE282E;
+  --color-orange: #F06321;
+  --color-navy: #004A7F;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-inter);
+}
+
+body {
+  background-color: #FAF8F5;
+  color: #1F2937;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F3EFE9;
+}
+::-webkit-scrollbar-thumb {
+  background: #AE282E;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C1F24;
+}
+
+/* Editorial Kicker Text Style - Clean typography without any pill container */
+.kicker-text {
+  display: inline-block;
+  font-family: var(--font-cinzel), 'Cinzel', serif;
+  font-size: 0.75rem; /* 12px */
+  font-weight: 700;
+  color: #AE282E; /* Brand Crimson matching Coaching Domains */
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+.kicker-text-crimson {
+  display: inline-block;
+  font-family: var(--font-cinzel), 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #AE282E;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+.kicker-text-light {
+  display: inline-block;
+  font-family: var(--font-cinzel), 'Cinzel', serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FF7B3D;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+}
+
+/* Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.gradient-text-brand {
+  background: linear-gradient(135deg, #AE282E 0%, #F06321 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-navy {
+  background: linear-gradient(135deg, #004A7F 0%, #AE282E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Infinite Marquee Keyframes */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-smooth {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 75s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-smooth:hover {
+  animation-play-state: paused;
+}
+
+/* Aceternity Meteors / Shooting Beams Animation */
+@keyframes meteor {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-600px);
+    opacity: 0;
+  }
+}
+
+.animate-meteor-effect {
+  animation: meteor 6s linear infinite;
+}
+
+/* GPU Shifting Text Gradient Animation */
+@keyframes text-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-text-gradient {
+  background-size: 250% auto !important;
+  animation: text-gradient-flow 4s ease infinite !important;
+}
