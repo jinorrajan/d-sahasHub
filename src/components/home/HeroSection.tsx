@@ -114,17 +114,17 @@ export function HeroSection() {
                 </h1>
               </motion.div>
 
-              {/* Dual Action Buttons */}
+              {/* Dual Action Buttons (Side by Side Single Row on Mobile & Desktop) */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="flex flex-wrap items-center gap-4 pt-1"
+                className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto"
               >
                 {/* Button 1: Brand Crimson / Orange Gradient CTA */}
                 <Link
                   href="/expertise"
-                  className="px-9 py-4 rounded-xl bg-gradient-to-r from-[#AE282E] to-[#F06321] hover:from-[#931f25] hover:to-[#d85518] text-white font-semibold text-sm tracking-wide transition-all duration-200 shadow-lg shadow-red-950/30 hover:shadow-xl inline-flex items-center justify-center"
+                  className="px-3.5 sm:px-9 py-3 sm:py-4 rounded-xl bg-gradient-to-r from-[#AE282E] to-[#F06321] hover:from-[#931f25] hover:to-[#d85518] text-white font-semibold text-xs sm:text-sm tracking-wide transition-all duration-200 shadow-lg shadow-red-950/30 hover:shadow-xl inline-flex items-center justify-center text-center whitespace-nowrap"
                 >
                   Start Your Journey
                 </Link>
@@ -132,7 +132,7 @@ export function HeroSection() {
                 {/* Button 2: Deep Navy Translucent Button */}
                 <Link
                   href="/contact"
-                  className="px-9 py-4 rounded-xl bg-[#0D2135] hover:bg-[#13304c] text-white font-medium text-sm border border-[#004A7F]/40 transition-all duration-200 inline-flex items-center justify-center"
+                  className="px-3.5 sm:px-9 py-3 sm:py-4 rounded-xl bg-[#0D2135] hover:bg-[#13304c] text-white font-medium text-xs sm:text-sm border border-[#004A7F]/40 transition-all duration-200 inline-flex items-center justify-center text-center whitespace-nowrap"
                 >
                   Schedule A Free Call
                 </Link>
