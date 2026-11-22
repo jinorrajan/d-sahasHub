@@ -94,11 +94,26 @@ export function HeroSection() {
                 </div>
 
                 {/* Pill Capsule with Text - slightly overlaps behind avatars */}
-                <div className="-ml-4 sm:-ml-5 pl-6 sm:pl-8 pr-5 sm:pr-7 py-2.5 sm:py-3.5 rounded-full bg-[#1A2634] text-white shadow-lg border border-white/5 shrink-0">
-                  <span className="text-xs sm:text-lg font-bold tracking-wide whitespace-nowrap">
-                    1,200+ Leaders Guided
+                <div className="-ml-4 sm:-ml-5 pl-6 sm:pl-8 pr-5 sm:pr-7 py-2 sm:py-3 rounded-full bg-[#1A2634] text-white shadow-lg border border-white/5 shrink-0">
+                  <span className="text-xs sm:text-sm font-bold tracking-wide whitespace-nowrap text-brand-orange">
+                    Professional Coach & Trainer
                   </span>
                 </div>
+              </motion.div>
+
+              {/* Personal Motto Eyebrow */}
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.25 }}
+                className="space-y-1.5"
+              >
+                <span className="text-xs sm:text-sm font-semibold tracking-wider text-brand-orange uppercase block">
+                  Transform the Mind • Empower the Leader • Enrich Life
+                </span>
+                <span className="text-xs text-gray-400 font-light block">
+                  Transform from an average person to an amazing personality.
+                </span>
               </motion.div>
 
               {/* 3-Line Pure White Display Headline */}
@@ -107,10 +122,10 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
               >
-                <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-medium text-white tracking-tight leading-[1.12]">
-                  Align Your Leadership <br />
-                  With the Impact You <br />
-                  Truly Want.
+                <h1 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-[62px] font-medium text-white tracking-tight leading-[1.14]">
+                  Strategic Leadership, <br />
+                  Emotional Intelligence & <br />
+                  Holistic Transformation.
                 </h1>
               </motion.div>
 
@@ -155,17 +170,17 @@ export function HeroSection() {
                   {[
                     { 
                       name: "BYST Guilds London", 
-                      tag: "Certified Mentor",
+                      tag: "Senior Startup Mentor (7+ Yrs)",
                       logo: "/images/client/logo/byst-guilds.png",
                     },
                     { 
                       name: "Rotary International", 
-                      tag: "District Leader",
+                      tag: "Charter President & RLI Trainer",
                       logo: "/images/client/logo/rotary-intl.png",
                     },
                     { 
                       name: "Elite World Records", 
-                      tag: "Record Holder",
+                      tag: "55h Marathon Record Holder",
                       logo: "/images/client/logo/elite-records.png",
                     },
                     { 
@@ -175,8 +190,13 @@ export function HeroSection() {
                     },
                     { 
                       name: "Anna University Alumni", 
-                      tag: "Honorary Member",
+                      tag: "ECE Systems Engineering '92",
                       logo: "/images/client/logo/anna-univ.png",
+                    },
+                    {
+                      name: "LIC of India",
+                      tag: "Accredited Financial Advisor",
+                      logo: "/images/client/logo/lic-logo.png",
                     },
                   ].map((partner, index) => (
                     <div
@@ -206,22 +226,22 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* TABLET / DESKTOP VIEW: Balanced 5-column grid */}
-          <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 items-center">
+          {/* TABLET / DESKTOP VIEW: Balanced 6-column grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5 lg:gap-6 items-center">
             {[
               { 
                 name: "BYST Guilds London", 
-                tag: "Certified Mentor",
+                tag: "Senior Startup Mentor (7+ Yrs)",
                 logo: "/images/client/logo/byst-guilds.png",
               },
               { 
                 name: "Rotary International", 
-                tag: "District Leader",
+                tag: "Charter President & RLI Trainer",
                 logo: "/images/client/logo/rotary-intl.png",
               },
               { 
                 name: "Elite World Records", 
-                tag: "Record Holder",
+                tag: "55h Marathon Record Holder",
                 logo: "/images/client/logo/elite-records.png",
               },
               { 
@@ -231,8 +251,13 @@ export function HeroSection() {
               },
               { 
                 name: "Anna University Alumni", 
-                tag: "Honorary Member",
+                tag: "ECE Systems Engineering '92",
                 logo: "/images/client/logo/anna-univ.png",
+              },
+              {
+                name: "LIC of India",
+                tag: "Accredited Financial Advisor",
+                logo: "/images/client/logo/lic-logo.png",
               },
             ].map((partner, index) => (
               <div

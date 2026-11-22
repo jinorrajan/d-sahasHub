@@ -68,6 +68,36 @@ export const achievementsData: AchievementItem[] = [
 
 export const testimonialsData: TestimonialItem[] = [
   {
+    id: "test-pdf-1",
+    quote:
+      "The counseling sessions have been life-changing. I feel more confident and better equipped to handle academic stress.",
+    author: "Priya",
+    role: "Student & Young Achiever",
+    company: "Academic Clarity Program",
+    location: "Chennai",
+    category: "Student Counseling",
+  },
+  {
+    id: "test-pdf-2",
+    quote:
+      "Workplace counseling helped me manage stress and improve communication. I am now more productive and happier at work.",
+    author: "Ravi",
+    role: "Team Lead & Project Manager",
+    company: "Workplace Wellness Program",
+    location: "Chennai",
+    category: "Workplace Counseling",
+  },
+  {
+    id: "test-pdf-3",
+    quote:
+      "The support and guidance I received during counseling have made a significant difference in my life. I feel empowered and more in control.",
+    author: "Nila",
+    role: "Professional & Entrepreneur",
+    company: "Women's Empowerment Initiative",
+    location: "Tamil Nadu",
+    category: "Personal Growth",
+  },
+  {
     id: "test-1",
     quote:
       "Dr. Devi's REACT-to-RESPOND framework fundamentally saved our family business from destructive generational friction. Her tactical calm and clarity changed how our leadership team operates.",
@@ -98,4 +128,3 @@ export const testimonialsData: TestimonialItem[] = [
     category: "Wellness",
   },
 ];
-

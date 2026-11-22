@@ -26,11 +26,7 @@ export function AboutSection() {
 
             <div className="max-w-3xl">
               <h2 className="font-sans text-lg sm:text-xl lg:text-2xl font-normal tracking-wide leading-relaxed text-gray-500">
-                <span className="text-gray-900 font-medium">Bridging 25+ years of enterprise tech discipline</span> with deep mentorship to build{" "}
-                <strong className="font-semibold text-brand-navy underline decoration-brand-orange/40 decoration-1 underline-offset-4">
-                  resilient tactical leaders
-                </strong>{" "}
-                <span className="text-gray-600">where business scale never costs personal peace.</span>
+                <span className="text-gray-900 font-medium">Internationally certified Professional Coach & Trainer</span> dedicated to transforming individuals, entrepreneurs, families, and organizations through integrated personal and professional development. An engineer by qualification with an MBA and over two decades of experience in Information Technology, Sales, Consulting, Marketing, and Business Development.
               </h2>
             </div>
           </div>

@@ -48,6 +48,6 @@ export interface TestimonialItem {
   role: string;
   company?: string;
   location?: string;
-  category: "Leadership" | "Mentorship" | "Wellness";
+  category: "Leadership" | "Mentorship" | "Wellness" | "Student Counseling" | "Workplace Counseling" | "Personal Growth";
 }
 

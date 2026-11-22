@@ -1,15 +1,124 @@
 import { ExpertiseItem } from "@/types";
 
+export interface ClassifiedServiceItem {
+  id: string;
+  title: string;
+  category: string;
+  shortDesc: string;
+  description: string;
+  audiences: string[];
+  keyPillars: string[];
+}
+
+export const classifiedServices: ClassifiedServiceItem[] = [
+  {
+    id: "business-owners",
+    title: "Counseling for Business Owners & MSMEs",
+    category: "Strategic Growth & Leadership",
+    shortDesc:
+      "Business owners and executives face unique challenges in balancing professional responsibilities with personal well-being.",
+    description:
+      "Our specialized executive counseling services offer personalized support for stress management, high-stakes decision-making, founder bottleneck resolution, and sustainable leadership development.",
+    audiences: ["Proprietors", "MSME Founders", "Freelance Workers", "Corporate Executives"],
+    keyPillars: [
+      "Decision-Making Under Pressure",
+      "Executive Stress Management",
+      "Founder-to-Leader Transition",
+      "Sustainable Business Governance",
+    ],
+  },
+  {
+    id: "workplace-counseling",
+    title: "Workplace Counseling & Culture",
+    category: "Corporate & Team Harmony",
+    shortDesc:
+      "Workplace stress, burnout, and interpersonal friction can heavily impact performance, team culture, and overall health.",
+    description:
+      "Designed to help working professionals and corporate teams manage cognitive stress, enhance communication, resolve inter-departmental conflicts, and build a productive, emotionally safe work environment.",
+    audiences: ["Corporate Teams", "Department Heads", "Mid-Management", "Working Professionals"],
+    keyPillars: [
+      "Burnout Mitigation & Energy Management",
+      "Conflict Resolution Protocols",
+      "Interpersonal Communication",
+      "Work-Life Balance Integration",
+    ],
+  },
+  {
+    id: "student-counseling",
+    title: "Student Counseling & Future Clarity",
+    category: "Youth Empowerment",
+    shortDesc:
+      "Academic pressure, peer relationships, and future career uncertainties can be overwhelming for aspiring students.",
+    description:
+      "We provide a safe, empathetic space to address anxiety, conquer imposter syndrome, develop effective emotional coping strategies, build authentic confidence, and set realistic milestones for academic and life success.",
+    audiences: ["School & College Students", "Competitive Exam Aspirants", "Young Innovators"],
+    keyPillars: [
+      "Academic Pressure & Exam Anxiety Release",
+      "Confidence & Vocal Presence",
+      "Career Alignment & Clarity",
+      "Goal-Setting Habit Architectures",
+    ],
+  },
+  {
+    id: "womens-counseling",
+    title: "Women's Counseling & Empowerment",
+    category: "Personal Growth & Self-Worth",
+    shortDesc:
+      "Women navigate multi-dimensional challenges intersecting leadership, work responsibilities, family dynamics, and personal growth.",
+    description:
+      "Targeted emotional and tactical support addressing stress management, self-esteem, boundary setting, relationship challenges, and holistic vitality — empowering women to thrive and lead fulfilling lives.",
+    audiences: ["Women Entrepreneurs", "Working Mothers", "Aspiring Leaders", "Homemakers"],
+    keyPillars: [
+      "Self-Esteem & Personal Boundary-Setting",
+      "Multi-Role Balance (Work, Family & Self)",
+      "Overcoming Emotional Barriers",
+      "Financial & Strategic Independence",
+    ],
+  },
+  {
+    id: "relationships-counseling",
+    title: "Relationships & Marriage Counseling",
+    category: "Emotional Well-Being",
+    shortDesc:
+      "Meaningful relationships require conscious effort, emotional safety, open dialogue, and proactive communication.",
+    description:
+      "Our marriage and couples counseling sessions assist partners in de-escalating misunderstandings, navigating challenging conversations with mutual respect, healing trust, and fostering deeper emotional connection.",
+    audiences: ["Couples", "Family Business Partners", "Marital Relationships"],
+    keyPillars: [
+      "Constructive Dialogue Without Defense",
+      "Emotional Trigger Identification",
+      "Mutual Trust Rebuilding",
+      "Shared Family & Personal Vision",
+    ],
+  },
+  {
+    id: "parenting-counseling",
+    title: "Counseling for Parents and Children",
+    category: "Family Wellness",
+    shortDesc:
+      "Parenting can be immensely rewarding yet deeply challenging across different childhood and teenage stages.",
+    description:
+      "Empathetic guidance on positive parenting methodologies, open child-parent communication, understanding behavioral signals, addressing digital addiction, and nurturing a harmonious home atmosphere.",
+    audiences: ["Parents", "Adolescents & Children", "Blended Families"],
+    keyPillars: [
+      "Empathetic & Firm Parenting Techniques",
+      "Understanding Teen Behavioral Signals",
+      "Digital Overuse & Focus Recovery",
+      "Family Emotional Harmony",
+    ],
+  },
+];
+
 export const expertiseData: ExpertiseItem[] = [
   {
     id: "tactical-leadership",
-    title: "Tactical Leadership & Management Coaching",
+    title: "Strategic Leadership & Management Coaching",
     subtitle: "Moving from REACT to RESPOND under high pressure",
     shortDesc:
-      "Empowering founders and executives to build calm decision frameworks, eliminate burnout, and lead with clarity.",
+      "Empowering founders, MSMEs, and executives to build calm decision frameworks, eliminate burnout, and lead with clarity.",
     detailedDesc:
       "Tactical leadership focuses on day-to-day high-stakes execution where decisions carry direct consequences. Leaders are guided to identify subconscious stress triggers, transition from hasty emotional reactions to measured strategic responses, and instill structured communication across their teams.",
-    targetAudience: "Entrepreneurs, C-Suite leaders, family business heads, and senior managers.",
+    targetAudience: "Entrepreneurs, MSME business owners, family business leaders, and corporate heads.",
     commonChallenges: [
       "Decision fatigue and high operational stress",
       "Knee-jerk firefighting rather than proactive delegation",
@@ -27,7 +136,7 @@ export const expertiseData: ExpertiseItem[] = [
   },
   {
     id: "business-consulting",
-    title: "Business Consulting & Mentoring",
+    title: "MSME Business Growth & Mentoring",
     subtitle: "Sustainable business direction rooted in 25+ years of enterprise experience",
     shortDesc:
       "Strategic mentoring for self-employed entrepreneurs, SME founders, and startups looking to scale operations, sales, and management systems.",
@@ -51,7 +160,7 @@ export const expertiseData: ExpertiseItem[] = [
   },
   {
     id: "life-skills",
-    title: "Life Skills & Personal Development",
+    title: "Emotional Intelligence & Life Skills",
     subtitle: "Building the self-mastery that underpins professional triumph",
     shortDesc:
       "Master emotional intelligence, confidence, public speaking, and problem-solving through proven behavioral paradigms.",
@@ -75,7 +184,7 @@ export const expertiseData: ExpertiseItem[] = [
   },
   {
     id: "wellness-balancing",
-    title: "Wellness & Life Balancing",
+    title: "Holistic Wellness & Lifestyle Transformation",
     subtitle: "Reiki and energetic balance to ensure success does not cost your health",
     shortDesc:
       "Integrative stress management, self-care practices, and certified Reiki techniques to preserve vitality and mental poise.",
@@ -99,27 +208,26 @@ export const expertiseData: ExpertiseItem[] = [
   },
   {
     id: "relationship-development",
-    title: "Relationship & Human Development",
-    subtitle: "Restoring cohesion in family enterprises and personal partnerships",
+    title: "Financial Planning & Wealth Protection",
+    subtitle: "Thoughtful financial security for families, professionals, and MSMEs",
     shortDesc:
-      "Guidance to establish respectful boundaries, heal generational friction, and communicate with clarity.",
+      "As an accredited LIC Financial Advisor, Dr. Devi helps leaders safeguard business assets and structure lifelong family prosperity.",
     detailedDesc:
-      "Business stress frequently spills into personal relationships, especially within family businesses where personal identities and commercial interests overlap. This track provides structured communication methods to resolve conflict without hostility.",
-    targetAudience: "Family business partners, co-founders, couples navigating demanding careers.",
+      "Financial peace of mind is an essential foundation of purposeful leadership. Through tailored life planning, business insurance structures, key-person risk mitigation, and retirement architectures, clients protect what they have worked hard to build.",
+    targetAudience: "MSME owners, family heads, professionals, and corporate leaders.",
     commonChallenges: [
-      "Generational disagreements between founders and successors",
-      "Unspoken resentment corroding team trust and family unity",
-      "Blurred boundaries between business hours and home life",
-      "Defensive patterns in contentious discussions",
+      "Unhedged key-man risk across enterprise operations",
+      "Inadequate family wealth protection against unexpected contingencies",
+      "Lack of structured retirement and wealth succession blueprints",
+      "Blurring business capital with personal family financial reserves",
     ],
     deliverables: [
-      "Interpersonal Conflict & Relationship Dynamic Mapping",
-      "Constructive Dialogue Protocols for High-Stakes Talks",
-      "Family Business Boundary Charters & Roles Definition",
-      "Mediation & Guided Harmony Consultation Sessions",
+      "Comprehensive Family & Enterprise Risk Assessment",
+      "LIC Tailored Wealth & Asset Protection Structures",
+      "Key-Person & Succession Planning Frameworks",
+      "Long-Term Financial Peace Milestone Reviews",
     ],
     formats: ["Individual 1:1", "Corporate Workshop"],
     iconName: "Users",
   },
 ];
-

@@ -5,7 +5,10 @@ import { motion } from "framer-motion";
 import {
   Send,
   Mail,
+  Phone,
+  MapPin,
   CheckCircle2,
+  Globe,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -50,27 +53,40 @@ export function AceternityContactSection() {
               Contact us
             </h2>
             <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
-              We are always looking for ways to improve our programs and executive guidance. Connect directly with Dr. P. V. Devi Seshadri&apos;s desk.
+              We are always looking for ways to improve our programs, leadership coaching, and holistic wellness guidance. Connect directly with Dr. P. V. Devi Seshadri&apos;s executive desk.
             </p>
           </div>
 
           {/* Inline Direct Contacts */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-gray-600 pt-1">
-            <a
-              href={`mailto:${siteConfig.contact.primaryEmail}`}
-              className="hover:text-brand-crimson transition-colors font-medium text-brand-navy"
-            >
-              {siteConfig.contact.primaryEmail}
-            </a>
-            <span className="text-gray-300">•</span>
-            <a
-              href={`tel:${siteConfig.contact.phone}`}
-              className="hover:text-brand-crimson transition-colors"
-            >
-              {siteConfig.contact.phone}
-            </a>
-            <span className="text-gray-300">•</span>
-            <span className="text-gray-500">Chennai, India</span>
+          <div className="space-y-2 text-xs sm:text-sm text-gray-600 pt-1">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <a
+                href={`mailto:${siteConfig.contact.primaryEmail}`}
+                className="hover:text-brand-crimson transition-colors font-medium text-brand-navy"
+              >
+                {siteConfig.contact.primaryEmail}
+              </a>
+              <span className="text-gray-300">•</span>
+              <a
+                href={`tel:${siteConfig.contact.phone}`}
+                className="hover:text-brand-crimson transition-colors font-medium text-brand-navy"
+              >
+                {siteConfig.contact.phone}
+              </a>
+              <span className="text-gray-300">•</span>
+              <a
+                href={siteConfig.contact.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand-crimson transition-colors text-gray-500"
+              >
+                {siteConfig.contact.website}
+              </a>
+            </div>
+
+            <p className="text-xs text-gray-500 leading-relaxed font-light">
+              {siteConfig.contact.addressLine1} {siteConfig.contact.addressLine2} {siteConfig.contact.city}
+            </p>
           </div>
 
           {/* Real World Map Graphic with "We are here" Location Beacon */}
@@ -156,7 +172,7 @@ export function AceternityContactSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    placeholder="Manu Arora"
+                    placeholder="Enter your full name"
                     className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm focus:border-brand-crimson focus:ring-2 focus:ring-brand-crimson/15 outline-none transition-all shadow-xs"
                   />
                 </div>
@@ -173,7 +189,7 @@ export function AceternityContactSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    placeholder="support@aceternity.com"
+                    placeholder="leader@enterprise.com"
                     className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm focus:border-brand-crimson focus:ring-2 focus:ring-brand-crimson/15 outline-none transition-all shadow-xs"
                   />
                 </div>
@@ -181,7 +197,7 @@ export function AceternityContactSection() {
                 {/* Field 3: Company */}
                 <div className="space-y-2">
                   <label className="block text-xs font-medium text-gray-700 tracking-wide">
-                    Company
+                    Organization / Company / Role
                   </label>
                   <input
                     type="text"
@@ -189,7 +205,7 @@ export function AceternityContactSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, company: e.target.value })
                     }
-                    placeholder="Aceternity Labs LLC"
+                    placeholder="e.g. Managing Director / Founder"
                     className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm focus:border-brand-crimson focus:ring-2 focus:ring-brand-crimson/15 outline-none transition-all shadow-xs"
                   />
                 </div>
@@ -197,7 +213,7 @@ export function AceternityContactSection() {
                 {/* Field 4: Message */}
                 <div className="space-y-2">
                   <label className="block text-xs font-medium text-gray-700 tracking-wide">
-                    Message
+                    Message / Leadership Focus
                   </label>
                   <textarea
                     required
@@ -206,7 +222,7 @@ export function AceternityContactSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    placeholder="Type your message here"
+                    placeholder="Type your message, leadership objective, or consultation requirement here..."
                     className="w-full px-4 py-3.5 rounded-xl bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm focus:border-brand-crimson focus:ring-2 focus:ring-brand-crimson/15 outline-none resize-none transition-all shadow-xs"
                   />
                 </div>
@@ -218,7 +234,7 @@ export function AceternityContactSection() {
                     disabled={isSubmitting}
                     className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-[#AE282E] to-[#F06321] hover:from-[#931f25] hover:to-[#d85518] shadow-md shadow-red-950/20 transition-all duration-200 disabled:opacity-60 uppercase tracking-wider"
                   >
-                    <span>{isSubmitting ? "Routing..." : "Submit"}</span>
+                    <span>{isSubmitting ? "Routing..." : "Submit Confidential Enquiry"}</span>
                     <Send className="w-3.5 h-3.5" />
                   </button>
                 </div>

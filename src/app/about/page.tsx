@@ -5,13 +5,17 @@ import {
   GraduationCap,
   Award,
   Briefcase,
-  Languages,
-  HeartHandshake,
   CheckCircle2,
   ArrowRight,
   ArrowUpRight,
   ShieldCheck,
   Linkedin,
+  Compass,
+  HeartHandshake,
+  Sparkles,
+  Target,
+  Eye,
+  Quote,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { ExecutiveJourneyTimeline } from "@/components/widgets/ExecutiveJourneyTimeline";
@@ -22,7 +26,7 @@ import { Meteors } from "@/components/ui/meteors";
 export const metadata = {
   title: "About Dr. P. V. Devi Seshadri",
   description:
-    "Learn about Dr. P. V. Devi Seshadri's 25+ years journey from IT infrastructure consulting to becoming a premier Tactical Leadership Management Coach, BYST Senior Mentor, and founder of D SAHAS Hub.",
+    "Learn about Dr. P. V. Devi Seshadri — Strategic Leadership & Management Coach, Emotional Intelligence Expert, Holistic Wellness Coach, and MSME Business Growth Strategist.",
 };
 
 export default function AboutPage() {
@@ -48,37 +52,47 @@ export default function AboutPage() {
           {/* RIGHT 6 COLS: EDITORIAL CONTENT (COMFORTABLE BREATHING ROOM) */}
           <div className="lg:col-span-6 space-y-6 sm:space-y-7 pl-0 lg:pl-4">
             
-            {/* Main Title matching Home page font styles */}
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[56px] font-normal text-gray-950 tracking-tight leading-[1.12]">
-              About Dr. Devi Seshadri
-            </h1>
-
-            {/* Paragraph Text with Our Authentic Client Content */}
-            <div className="space-y-4 text-base sm:text-[17px] text-gray-600 leading-relaxed font-normal">
-              <p>
-                Bridging 25+ years of enterprise IT corporate discipline with deep human coaching to build resilient, deliberate business leaders where scale never costs personal and family peace.
-              </p>
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
-                For over 22 years, she worked across the competitive landscapes of IT infrastructure solutions consulting, enterprise hardware and software architecture, and corporate sales. Throughout those decades, she witnessed high-velocity leaders frequently derail not by lack of market opportunity, but by unmanaged reactive stress and communication breakdowns.
-              </p>
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
-                Today, as Founder of D SAHAS Hub, Certified Life Coach (USA), BYST Senior Mentor, and World Record Trainer, she guides leaders to shift from instinctive <strong className="text-brand-crimson font-medium">REACT to deliberate RESPOND</strong>.
+            <div className="space-y-2">
+              <span className="kicker-text-crimson">
+                Internationally Certified Professional Coach & Trainer
+              </span>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[54px] font-normal text-gray-950 tracking-tight leading-[1.12]">
+                Dr. P. V. Devi Seshadri
+              </h1>
+              <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-orange">
+                Strategic Leadership & Management Coach • Emotional Intelligence Expert • Holistic Wellness Coach • MSME Business Growth Strategist
               </p>
             </div>
 
-            {/* Verification Highlights - Clean Text + Icon (Background & Borders removed) */}
+            {/* Paragraph Text with Verified Client Biography */}
+            <div className="space-y-4 text-base sm:text-[16.5px] text-gray-600 leading-relaxed font-normal">
+              <p>
+                Dr. Devi Seshadri is an internationally certified Professional Coach, Leadership Trainer, Emotional Counsellor, and Holistic Wellness Coach dedicated to transforming individuals, entrepreneurs, families, and organizations through integrated personal and professional development.
+              </p>
+              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                An engineer by qualification with an MBA and over two decades of experience in Information Technology, Sales, Consulting, Marketing, and Business Development, she combines strategic thinking with emotional intelligence to help people build meaningful lives, resilient leadership, and sustainable success.
+              </p>
+              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                As the Founder of <strong className="text-brand-navy font-semibold">dSkill</strong>, <strong className="text-brand-navy font-semibold">Live Ease</strong>, and <strong className="text-brand-navy font-semibold">Dhee Foods</strong>, Dr. Devi has developed innovative coaching frameworks blending leadership development, emotional well-being, financial awareness, business strategy, mindfulness, and holistic wellness.
+              </p>
+              <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                Alongside her coaching practice, Dr. Devi is an accredited <strong className="text-brand-crimson font-medium">LIC Financial Advisor</strong>, assisting families and MSME owners in building financial security, key-person risk mitigation, and generational prosperity.
+              </p>
+            </div>
+
+            {/* Verification Highlights */}
             <div className="pt-2 flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-2 text-xs font-semibold text-[#07131F]">
                 <ShieldCheck className="w-4 h-4 text-brand-crimson shrink-0" />
-                <span>25+ Years Cross-Industry Experience</span>
+                <span>25+ Years Corporate & Consulting Experience</span>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-[#07131F]">
                 <Award className="w-4 h-4 text-brand-orange shrink-0" />
-                <span>55h 40s World Record Trainer</span>
+                <span>55h 40s World Record Marathon Participant</span>
               </div>
             </div>
 
-            {/* Brand Gradient Button with Angled Arrow (Consistent Book Now style) */}
+            {/* Brand Gradient Button */}
             <div className="pt-2">
               <Link
                 href="/contact"
@@ -94,10 +108,72 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 2. VERIFIED QUALIFICATIONS & PROFESSIONAL CERTIFICATIONS (MINDCO BENTO ROWS STYLE) */}
+      {/* 2. VISION & MISSION CARDS + CORE BELIEF QUOTE */}
+      <section className="w-[95%] sm:w-[94%] max-w-[1890px] mx-auto px-2 sm:px-4 space-y-8">
+        
+        {/* Core Belief Quote Callout */}
+        <div className="rounded-[32px] bg-[#07131F] border border-[#004A7F]/40 p-8 sm:p-12 text-center text-white relative overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto space-y-4 relative z-10">
+            <Quote className="w-10 h-10 text-brand-orange/60 mx-auto" />
+            <p className="font-display text-xl sm:text-3xl font-light leading-relaxed tracking-tight">
+              &quot;When the mind is empowered, leadership becomes purposeful, relationships become meaningful, businesses become sustainable, and life becomes fulfilling.&quot;
+            </p>
+            <p className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-brand-orange">
+              — Dr. P. V. Devi Seshadri • Founder, dSkill & D SAHAS Hub
+            </p>
+          </div>
+          <div className="absolute top-0 right-1/4 w-[500px] h-[250px] bg-[#004A7F]/20 blur-[130px] pointer-events-none rounded-full" />
+        </div>
+
+        {/* Vision & Mission Split Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          
+          {/* Vision Card */}
+          <div className="rounded-[32px] bg-white border border-gray-200/90 p-8 sm:p-10 shadow-sm flex flex-col justify-between space-y-5">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-brand-crimson/10 border border-brand-crimson/20 flex items-center justify-center text-brand-crimson">
+                <Eye className="w-6 h-6" />
+              </div>
+              <span className="kicker-text-crimson">Our Vision</span>
+              <h2 className="font-display text-2xl sm:text-3xl font-light text-brand-navy">
+                Empowering Minds, Building Ethical Communities
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
+                {siteConfig.vision}
+              </p>
+            </div>
+            <div className="pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-brand-crimson uppercase tracking-wider">
+              <span>Clarity • Resilience • Ethical Leadership</span>
+            </div>
+          </div>
+
+          {/* Mission Card */}
+          <div className="rounded-[32px] bg-white border border-gray-200/90 p-8 sm:p-10 shadow-sm flex flex-col justify-between space-y-5">
+            <div className="space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange">
+                <Target className="w-6 h-6" />
+              </div>
+              <span className="kicker-text">Our Mission</span>
+              <h2 className="font-display text-2xl sm:text-3xl font-light text-brand-navy">
+                Guiding Transformation Beyond Limitations
+              </h2>
+              <p className="text-sm sm:text-base text-gray-600 font-light leading-relaxed">
+                {siteConfig.mission}
+              </p>
+            </div>
+            <div className="pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider">
+              <span>Mindset • Strategy • Purposeful Living</span>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* 3. VERIFIED QUALIFICATIONS & PROFESSIONAL CERTIFICATIONS */}
       <section className="w-[95%] sm:w-[94%] max-w-[1890px] mx-auto px-2 sm:px-4 space-y-10 sm:space-y-12">
         
-        {/* SECTION HEADER: MATCHING "WHY CHOOSE US" / "ABOUT" HEADER FORMAT */}
+        {/* SECTION HEADER */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
             <div>
@@ -117,7 +193,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* 3 ACADEMIC & PROFESSIONAL FOUNDATION CARDS (DARK NAVY COLOR, TOP ICONS REMOVED) */}
+        {/* 3 ACADEMIC & PROFESSIONAL FOUNDATION CARDS */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {[
             {
@@ -153,10 +229,8 @@ export default function AboutPage() {
                 key={item.id}
                 className="relative rounded-[24px] sm:rounded-[26px] bg-[#07131F] border border-[#004A7F]/40 p-6 sm:p-7 flex flex-col justify-between overflow-hidden shadow-xl shadow-black/20 group hover:border-[#004A7F]/70 transition-all duration-300 hover:shadow-2xl hover:shadow-black/40 min-h-[300px]"
               >
-                {/* 1. Aceternity Meteor Tail Effect */}
                 <Meteors number={14} />
 
-                {/* 2. Top Header Row: Title/SubRole (Left) & Status Badge (Right) - Top Icon Removed */}
                 <div className="relative z-10 flex items-start justify-between gap-3">
                   <div>
                     <h3 className="font-display text-base sm:text-lg font-semibold text-white tracking-tight leading-snug">
@@ -167,29 +241,25 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  {/* Top Right Status Badge */}
                   <span className="text-[11px] sm:text-xs font-medium text-gray-300 bg-white/[0.06] border border-white/10 px-3 py-1 rounded-full whitespace-nowrap shrink-0 shadow-xs">
                     {item.badge}
                   </span>
                 </div>
 
-                {/* 3. Middle Body Paragraph: Editorial content from image 2 */}
                 <div className="relative z-10 my-6 flex-1 flex items-center">
                   <p className="text-xs sm:text-[13.5px] text-gray-300/90 leading-relaxed font-normal">
                     {item.description}
                   </p>
                 </div>
 
-                {/* 4. Bottom Footer Row: Institution/Location (Left) & Action Buttons (Right) */}
                 <div className="relative z-10 flex items-center justify-between pt-4 border-t border-white/[0.08] mt-auto">
                   <span className="text-xs sm:text-[13px] font-medium text-gray-400">
                     {item.institution}
                   </span>
 
-                  {/* Social / Credential verification icon buttons matching image 1 */}
                   <div className="flex items-center gap-2 shrink-0">
                     <a
-                      href="https://www.linkedin.com/in/pvdeviseshadri"
+                      href="https://www.linkedin.com/in/devi-seshadri/"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="LinkedIn profile verification"
@@ -207,7 +277,6 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* 5. Subtle Ambient Corner Glow */}
                 <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-brand-orange/5 rounded-full blur-2xl pointer-events-none group-hover:bg-brand-orange/10 transition-colors duration-500" />
               </div>
             );
@@ -216,12 +285,12 @@ export default function AboutPage() {
 
       </section>
 
-      {/* 3. DEDICATED 25-YEAR EXECUTIVE TIMELINE (REPLACING THE DUPLICATE WHY-CHOOSE-US HOME SECTION) */}
+      {/* 4. DEDICATED 25-YEAR EXECUTIVE TIMELINE */}
       <section className="w-[95%] sm:w-[94%] max-w-[1890px] mx-auto px-2 sm:px-4">
         <ExecutiveJourneyTimeline />
       </section>
 
-      {/* 4. EXACT HOME SCREEN TESTIMONIALS SECTION */}
+      {/* 5. TESTIMONIALS SECTION */}
       <TestimonialsSection />
 
     </div>
