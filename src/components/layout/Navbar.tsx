@@ -52,8 +52,8 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-40 transition-all duration-300 transform",
         isVisible ? "translate-y-0" : "-translate-y-full",
-        isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm py-2.5 sm:py-3 border-b border-gray-100"
+        isScrolled || isMobileMenuOpen
+          ? "bg-white shadow-sm py-2.5 sm:py-3 border-b border-gray-100"
           : "bg-transparent py-4 sm:py-5"
       )}
     >
@@ -133,16 +133,16 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer (Solid Pure White Background - No transparency) */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white/98 backdrop-blur-xl border-b border-gray-200 shadow-xl overflow-hidden"
+            className="lg:hidden bg-white border-b border-gray-200 shadow-2xl overflow-hidden"
           >
-            <div className="max-w-7xl mx-auto px-4 py-6 space-y-3">
+            <div className="max-w-7xl mx-auto px-4 py-6 space-y-3 bg-white">
               {navItems.map((item) => {
                 const isActive = pathname === item.href;
                 return (
